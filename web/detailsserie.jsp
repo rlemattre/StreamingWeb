@@ -17,13 +17,11 @@
         <c:import url="_ENTETE.jsp"/>
         <c:import url="_MENU.jsp"/>
         <main>
-            <h1>Séries</h1>
-            <c:forEach items="${listeDesSeries}" var="serieAAfficher">
-                ${serieAAfficher.titre}
-                <a href="detailsSerie?idDeLaSerie=${serieAAfficher.id}"> <button>Détails</button></a>
-                <br>
-            </c:forEach>
-            <br>
+            
+            
+            
+            
+            
         </main>
         <c:import url="_PIED.jsp"/>
     </body>

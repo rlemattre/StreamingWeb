@@ -19,7 +19,7 @@ import streamingweb.service.SerieServiceImpl;
  *
  * @author romua
  */
-@WebServlet(name = "DetailsSerieServlet", urlPatterns = {"/DetailsSerieServlet"})
+@WebServlet(name = "DetailsSerieServlet", urlPatterns = {"/detailsSerie"})
 public class DetailsSerieServlet extends HttpServlet {
 
     private SerieService service = new SerieServiceImpl();

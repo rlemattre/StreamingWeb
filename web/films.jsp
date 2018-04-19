@@ -25,6 +25,7 @@
                 <a href="detailsFilm?idDuFilm=${filmAAfficher.id}"> <button>Détails</button></a>
                 <br>
             </c:forEach>
+                <br>
         </main>
         <c:import url="_PIED.jsp"/>
     </body>
