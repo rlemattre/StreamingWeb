@@ -39,7 +39,7 @@
             <div> Lien(s) : <br>
                 <c:forEach items="${detailsSerie.saisonList}" var="saisonChoix"> &nbsp;&nbsp;&nbsp; - Saison ${saisonChoix.numsaison} : <br>
                     <c:forEach items="${saisonChoix.episodeList}" var="episodeChoix"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Episode ${episodeChoix.numepisode} Titre ${episodeChoix.titre} : <br>
-                        <c:forEach items="${episodeChoix.lienList}" var="lienChoix"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- ${lienChoix.url}- Langue : ${lienChoix.langue} Qualité : ${lienChoix.qualite} <a href="${lienChoix.url}"> <button> Lien </button> </a> <br> </c:forEach>
+                        <c:forEach items="${episodeChoix.lienList}" var="lienChoix"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Langue : ${lienChoix.langue} Qualité : ${lienChoix.qualite} <a href="${lienChoix.url}"> <button> Lien </button> </a> <br> </c:forEach>
                     </c:forEach>    
                 </c:forEach>
             </div>
