@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package streamingweb.service;
+package streamingweb.dao;
 
 import java.util.List;
-import streamingweb.entity.Film;
+import streamingweb.entity.Genre;
 
 /**
  *
  * @author romua
  */
-public interface FilmService {
+public interface GenreDAO {
     
-    public List<Film> listerFilms();
-    
-    public Film rechercheParId(long id);
+    public List<Genre> lister();
     
 }

@@ -19,4 +19,6 @@ public interface FilmsDAO {
     
     public Film rechercher(long id);
     
+    public List<Film> ajouter();
+    
 }

@@ -36,4 +36,11 @@ public class FilmsDAOJpaImpl implements FilmsDAO {
         
         return em.find(Film.class, id);
     }
+
+    @Override
+    public List<Film> ajouter() {
+
+        
+        
+    }
 }

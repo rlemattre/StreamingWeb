@@ -6,16 +6,14 @@
 package streamingweb.service;
 
 import java.util.List;
-import streamingweb.entity.Film;
+import streamingweb.entity.Genre;
 
 /**
  *
  * @author romua
  */
-public interface FilmService {
+public interface GenreService {
     
-    public List<Film> listerFilms();
-    
-    public Film rechercheParId(long id);
+    public List<Genre> listerGenres();
     
 }
