@@ -44,22 +44,22 @@ public class Personne implements Serializable {
         @JoinColumn(name = "REALISATEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "SERIESREALISES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Serie> serieList;
+    private List<Serie> seriesRealisees;
     @JoinTable(name = "REAL_FILM", joinColumns = {
         @JoinColumn(name = "REALISATEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "FILMSREALISES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Film> filmList;
+    private List<Film> filmsRealises;
     @JoinTable(name = "ACTEUR_FILM", joinColumns = {
         @JoinColumn(name = "ACTEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "FILMSJOUES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Film> filmList1;
+    private List<Film> filmsJoues;
     @JoinTable(name = "ACTEUR_SERIE", joinColumns = {
         @JoinColumn(name = "ACTEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "SERIESJOUES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Serie> serieList1;
+    private List<Serie> seriesJouees;
 
     public Personne() {
     }
@@ -92,36 +92,36 @@ public class Personne implements Serializable {
         this.prenom = prenom;
     }
 
-    public List<Serie> getSerieList() {
-        return serieList;
+    public List<Serie> getSeriesRealisees() {
+        return seriesRealisees;
     }
 
-    public void setSerieList(List<Serie> serieList) {
-        this.serieList = serieList;
+    public void setSeriesRealisees(List<Serie> seriesRealisees) {
+        this.seriesRealisees = seriesRealisees;
     }
 
-    public List<Film> getFilmList() {
-        return filmList;
+    public List<Film> getFilmsRealises() {
+        return filmsRealises;
     }
 
-    public void setFilmList(List<Film> filmList) {
-        this.filmList = filmList;
+    public void setFilmsRealises(List<Film> filmsRealises) {
+        this.filmsRealises = filmsRealises;
     }
 
-    public List<Film> getFilmList1() {
-        return filmList1;
+    public List<Film> getFilmsJoues() {
+        return filmsJoues;
     }
 
-    public void setFilmList1(List<Film> filmList1) {
-        this.filmList1 = filmList1;
+    public void setFilmsJoues(List<Film> filmsJoues) {
+        this.filmsJoues = filmsJoues;
     }
 
-    public List<Serie> getSerieList1() {
-        return serieList1;
+    public List<Serie> getSeriesJouees() {
+        return seriesJouees;
     }
 
-    public void setSerieList1(List<Serie> serieList1) {
-        this.serieList1 = serieList1;
+    public void setSeriesJouees(List<Serie> seriesJouees) {
+        this.seriesJouees = seriesJouees;
     }
 
     @Override

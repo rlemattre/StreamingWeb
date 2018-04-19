@@ -47,10 +47,10 @@ public class Film implements Serializable {
     private String titre;
     @ManyToMany(mappedBy = "films")
     private List<Pays> pays;
-    @ManyToMany(mappedBy = "filmList")
-    private List<Personne> personneList;
-    @ManyToMany(mappedBy = "filmList1")
-    private List<Personne> personneList1;
+    @ManyToMany(mappedBy = "filmsRealises")
+    private List<Personne> realisateurs;
+    @ManyToMany(mappedBy = "filmsJoues")
+    private List<Personne> acteurs;
     @JoinColumn(name = "GENRE_ID", referencedColumnName = "ID")
     @ManyToOne
     private Genre genre;
@@ -112,20 +112,20 @@ public class Film implements Serializable {
         this.pays = pays;
     }
 
-    public List<Personne> getPersonneList() {
-        return personneList;
+    public List<Personne> getRealisateurs() {
+        return realisateurs;
     }
 
-    public void setPersonneList(List<Personne> personneList) {
-        this.personneList = personneList;
+    public void setRealisateurs(List<Personne> realisateurs) {
+        this.realisateurs = realisateurs;
     }
 
-    public List<Personne> getPersonneList1() {
-        return personneList1;
+    public List<Personne> getActeurs() {
+        return acteurs;
     }
 
-    public void setPersonneList1(List<Personne> personneList1) {
-        this.personneList1 = personneList1;
+    public void setActeurs(List<Personne> acteurs) {
+        this.acteurs = acteurs;
     }
 
     public Genre getGenre() {

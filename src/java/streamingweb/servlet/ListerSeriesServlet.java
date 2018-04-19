@@ -12,26 +12,29 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import streamingweb.entity.Film;
-import streamingweb.service.FilmService;
-import streamingweb.service.FilmServiceImpl;
+import streamingweb.entity.Serie;
+import streamingweb.service.SerieService;
+import streamingweb.service.SerieServiceImpl;
 
 /**
  *
  * @author romua
  */
-@WebServlet(name = "Filmsservlet", urlPatterns = {"/films"})
-public class FilmsServlet extends HttpServlet {
+@WebServlet(name = "ListerSeriesServlet", urlPatterns = {"/lister_series"})
+public class ListerSeriesServlet extends HttpServlet {
 
-    private FilmService service = new FilmServiceImpl();
+    private SerieService service = new SerieServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Film> films = service.listerFilms();   // 1. Récup la liste des films grace au filmservice
-
-        req.setAttribute("listeDesFilms", films);   // 2. Envoyer liste des films film comme attribut req
-
-        req.getRequestDispatcher("films.jsp").forward(req, resp);      // 3. forward vers films.jsp
+        List<Serie> series = service.listerSeries();
+        
+        req.setAttribute("listeDesSeries", series);
+        
+        req.getRequestDispatcher("series.jsp").forward(req, resp);
     }
+    
+    
+    
 }

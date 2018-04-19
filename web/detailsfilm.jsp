@@ -17,30 +17,30 @@
         <c:import url="_ENTETE.jsp"/>
         <c:import url="_MENU.jsp"/>
         <main>
-            <h1>${detailsSerie.titre}</h1>
+            <h1>${detailsFilm.titre}</h1>
             <br>
             <div> Realisateur(s) : <br>
-                <c:forEach items="${detailsSerie.personneList}" var="realisateurChoix"> &nbsp;&nbsp;&nbsp; - ${realisateurChoix.prenom} ${realisateurChoix.nom} <br> </c:forEach>
+                <c:forEach items="${detailsFilm.realisateurs}" var="realisateurChoix"> &nbsp;&nbsp;&nbsp; - ${realisateurChoix.prenom} ${realisateurChoix.nom} <br> </c:forEach>
             </div>
             <br>
-            <div> Année de production : ${detailsSerie.annee}</div>
+            <div> Année de production : ${detailsFilm.annee}</div>
             <br>
             <div> Acteurs : <br>
-                <c:forEach items="${detailsSerie.personneList1}" var="acteurChoix"> &nbsp;&nbsp;&nbsp; - ${acteurChoix.prenom} ${acteurChoix.nom} <br> </c:forEach>
+                <c:forEach items="${detailsFilm.acteurs}" var="acteurChoix"> &nbsp;&nbsp;&nbsp; - ${acteurChoix.prenom} ${acteurChoix.nom} <br> </c:forEach>
             </div>
             <br>
-            <div> Genre : ${detailsSerie.genre.nom}</div>
+            <div> Genre : ${detailsFilm.genre.nom}</div>
             <br>
             <div> Pays : <br> 
-                <c:forEach items="${detailsSerie.pays}" var="paysChoix"> &nbsp;&nbsp;&nbsp; - ${paysChoix.nom} </c:forEach> <br> 
+                <c:forEach items="${detailsFilm.pays}" var="paysChoix"> &nbsp;&nbsp;&nbsp; - ${paysChoix.nom} </c:forEach> <br> 
             </div>
             <br>
-            <div> Durée (en minutes) : ${detailsSerie.duree}</div>
+            <div> Durée (en minutes) : ${detailsFilm.duree}</div>
             <br>
-            <div> Synopsis : ${detailsSerie.synopsis}</div>
+            <div> Synopsis : ${detailsFilm.synopsis}</div>
             <br>
             <div> Lien(s) : <br>
-                <c:forEach items="${detailsSerie.lienList}" var="lienChoix"> &nbsp;&nbsp;&nbsp; - Langue : ${lienChoix.langue} Qualité : ${lienChoix.qualite} <a href="${lienChoix.url}"> <button> Lien </button> </a> <br> </c:forEach></div>
+                <c:forEach items="${detailsFilm.lienList}" var="lienChoix"> &nbsp;&nbsp;&nbsp; - Langue : ${lienChoix.langue} Qualité : ${lienChoix.qualite} <a href="${lienChoix.url}"> <button> Lien </button> </a> <br> </c:forEach></div>
             <br>
         </main>
         <c:import url="_PIED.jsp"/>

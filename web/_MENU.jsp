@@ -7,7 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <nav>
-    <a href="films"> <button>Film</button></a>
+    <a href="lister_films"> <button>Film</button></a>
         
-    <a href="series"> <button>Série</button></a>
+    <a href="lister_series"> <button>Série</button></a>
 </nav>
