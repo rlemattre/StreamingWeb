@@ -77,6 +77,9 @@ public class AjouterFilmServlet extends HttpServlet {
         
         // envoi du film au filmService
         filmservice.ajouter(film);
+        
+        // renvoi vers la liste des films utilisation de la redirection et pas du forward !
+        resp.sendRedirect("lister_films");
     }
 
 }
