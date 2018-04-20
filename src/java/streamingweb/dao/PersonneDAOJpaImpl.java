@@ -22,7 +22,7 @@ public class PersonneDAOJpaImpl implements PersonneDAO {
 
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         
-        Query query = em.createQuery("SELECT p FROM Personne p");
+        Query query = em.createQuery("SELECT p FROM Personne p ORDER BY p.nom, p.prenom");
         
         List<Personne> personnes = query.getResultList();
         

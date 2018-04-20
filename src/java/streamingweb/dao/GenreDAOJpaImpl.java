@@ -22,7 +22,7 @@ public class GenreDAOJpaImpl implements GenreDAO {
 
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         
-        Query query = em.createQuery("SELECT g FROM Genre g");
+        Query query = em.createQuery("SELECT g FROM Genre g ORDER BY g.nom ASC");
         
         List<Genre> genres = query.getResultList();
         

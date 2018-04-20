@@ -23,7 +23,7 @@ public class PaysDAOJpaImpl implements PaysDAO {
 
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         
-        Query query = em.createQuery("SELECT p FROM Pays p");
+        Query query = em.createQuery("SELECT p FROM Pays p ORDER BY p.nom");
         
         List<Pays> pays = query.getResultList();
         
