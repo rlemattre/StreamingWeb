@@ -18,4 +18,6 @@ public interface FilmService {
     
     public Film rechercheParId(long id);
     
+    public void ajouter(Film film);
+    
 }

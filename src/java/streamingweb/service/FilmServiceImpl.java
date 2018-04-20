@@ -29,4 +29,12 @@ public class FilmServiceImpl implements FilmService {
 
         return dao.rechercher(id);
     }
+
+    @Override
+    public void ajouter(Film film) {
+
+        dao.ajouter(film);
+    }
+
+    
 }

@@ -37,10 +37,16 @@ public class FilmsDAOJpaImpl implements FilmsDAO {
         return em.find(Film.class, id);
     }
 
-    @Override
-    public List<Film> ajouter() {
 
+    @Override
+    public void ajouter(Film film) {
+ 
         
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         
-    }
+        em.getTransaction().begin();
+           
+        em.persist(film);
+        
+        em.getTransaction().commit();    }
 }

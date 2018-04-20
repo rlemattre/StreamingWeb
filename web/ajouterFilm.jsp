@@ -19,7 +19,7 @@
         <main>
             <h1>Ajouter un film</h1>
             
-            <form action="ajouter_film" method="POST" >
+            <form method="POST" > <!-- on ne modifie pas la route ! -->
                 
                 <label> Saisir le titre </label>
                 <input type="text" name="titre">
@@ -31,12 +31,33 @@
                 <input type="text" name="duree">
                 <br><br>
                 <label> Saisir le synopsis </label>
-                <input type="text" name="synopsis">
+                <textarea  name="synopsis"></textarea>
                 <br><br>
                 <label for="genre"> Choisir le genre </label>
                 <select name="genre">
                     <c:forEach items="${listeDesGenres}" var="genreChoix">
-                        <option value="${genreChoix.id}">${genreChoix.nom}</option>
+                        <option value="${genreChoix.nom}">${genreChoix.nom}</option>
+                    </c:forEach>
+                </select>
+                <br><br>
+                <label name="pays"> Choisir le pays de production </label>
+                <select name="pays">
+                    <c:forEach items="${listeDesPays}" var="paysChoix">
+                        <option value="${paysChoix.nom}">${paysChoix.nom}</option>
+                    </c:forEach>
+                </select>
+                <br><br>
+                <label name="acteur"> Choisir un acteur </label>
+                <select name="acteur">
+                    <c:forEach items="${listeDesPersonnes}" var="acteurChoix">
+                        <option value="${acteurChoix.id}">${acteurChoix.nom} ${acteurChoix.prenom}</option>
+                    </c:forEach>
+                </select>
+                <br><br>
+                <label name="realisateur"> Choisir un réalisateur </label>
+                <select name="realisateur">
+                    <c:forEach items="${listeDesPersonnes}" var="realisateurChoix">
+                        <option value="${acteurChoix.id}">${acteurChoix.nom} ${acteurChoix.prenom}</option>
                     </c:forEach>
                 </select>
                 <br><br>

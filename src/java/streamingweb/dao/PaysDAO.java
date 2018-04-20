@@ -6,19 +6,14 @@
 package streamingweb.dao;
 
 import java.util.List;
-import streamingweb.entity.Film;
-import streamingweb.entity.Serie;
+import streamingweb.entity.Pays;
 
 /**
  *
  * @author romua
  */
-public interface FilmsDAO {
-
-    public List<Film> lister(); 
+public interface PaysDAO {
     
-    public Film rechercher(long id);
-    
-    public void ajouter(Film film);
+    public List<Pays> lister();
     
 }
