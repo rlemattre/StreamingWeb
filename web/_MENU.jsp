@@ -11,5 +11,5 @@
         
     <a href="lister_series"> <button>Série</button></a>
     
-    <a href="ajouter"> <button>Ajouter un film</button></a>
+    <a href="ajouter_film"> <button>Ajouter un film</button></a>
 </nav>

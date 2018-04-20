@@ -6,6 +6,7 @@
 package streamingweb.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -37,7 +38,7 @@ public class Genre implements Serializable {
     @Column(name = "NOM")
     private String nom;
     @OneToMany(mappedBy = "genre")
-    private List<Film> filmList;
+    private List<Film> filmList = new ArrayList<>();
     @OneToMany(mappedBy = "genre")
     private List<Serie> serieList;
 

@@ -16,6 +16,8 @@ import streamingweb.entity.Film;
 import streamingweb.entity.Genre;
 import streamingweb.entity.Pays;
 import streamingweb.entity.Personne;
+import streamingweb.service.FilmService;
+import streamingweb.service.FilmServiceImpl;
 import streamingweb.service.GenreService;
 import streamingweb.service.GenreServiceImpl;
 import streamingweb.service.PaysService;
@@ -33,6 +35,7 @@ public class AjouterFilmServlet extends HttpServlet {
     private GenreService genreService = new GenreServiceImpl();
     private PaysService paysService = new PaysServiceImpl();
     private PersonneService personneService = new PersonneServiceImpl();
+    private FilmService filmservice = new FilmServiceImpl();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -48,23 +51,32 @@ public class AjouterFilmServlet extends HttpServlet {
         req.getRequestDispatcher("ajouterFilm.jsp").forward(req, resp);
     }
 
-    
-    
-    
-    
-@Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-    Film newFilm = new Film();
+        // crétaion du film à enregistrer
+        Film film = new Film();
 
-    newFilm.setTitre("titre");
-    newFilm.setAnnee("annee");
-    newFilm.setDuree("duree");
-    newFilm.setSynopsis("synopsis");
-    newFilm.setGenre("genre");
+        film.setTitre( req.getParameter("titre") );
+        
+        int annee = Integer.parseInt(req.getParameter("anneeProduction"));
+        film.setAnnee(annee);
+        
+        int duree = Integer.parseInt(req.getParameter("duree"));
+        film.setDuree(duree);
+        
+        film.setSynopsis( req.getParameter("synopsis") );
+        
+        long genre = Long.parseLong(req.getParameter("genre"));
+        
+        Genre g = new Genre();
+        g.setId(genre);
+        
+        g.getFilmList().add(film);
+        film.setGenre(g);
+        
+        // envoi du film au filmService
+        filmservice.ajouter(film);
+    }
 
-
-}
-
-    
 }

@@ -7,7 +7,6 @@ package streamingweb.dao;
 
 import java.util.List;
 import streamingweb.entity.Film;
-import streamingweb.entity.Serie;
 
 /**
  *

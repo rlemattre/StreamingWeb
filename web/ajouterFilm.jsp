@@ -40,27 +40,6 @@
                     </c:forEach>
                 </select>
                 <br><br>
-                <label> Choisir le pays de production </label>
-                <select name="pays">
-                    <c:forEach items="${listeDesPays}" var="paysChoix">
-                        <option value="${paysChoix.nom}">${paysChoix.nom}</option>
-                    </c:forEach>
-                </select>
-                <br><br>
-                <label> Choisir un acteur </label>
-                <select name="acteur">
-                    <c:forEach items="${listeDesPersonnes}" var="acteurChoix">
-                        <option value="${acteurChoix.id}">${acteurChoix.nom} ${acteurChoix.prenom}</option>
-                    </c:forEach>
-                </select>
-                <br><br>
-                <label> Choisir un réalisateur </label>
-                <select name="realisateur">
-                    <c:forEach items="${listeDesPersonnes}" var="realisateurChoix">
-                        <option value="${realisateurChoix.id}">${realisateurChoix.nom} ${realisateurChoix.prenom}</option>
-                    </c:forEach>
-                </select>
-                <br><br>
                 <input type="submit">
                 <br><br>
                 
